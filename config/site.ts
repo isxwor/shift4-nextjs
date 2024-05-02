@@ -1,9 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Next.js',
-  description:
-    'Beautifully designed components built with Radix UI and Tailwind CSS.',
+  name: 'Shift4 Next.js',
+  description: 'Shift4 integration in Next.js',
   mainNav: [
     {
       title: 'Home',
@@ -11,8 +10,6 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: 'https://twitter.com',
-    github: 'https://github.com',
-    docs: 'https://ui.shadcn.com',
+    github: 'https://github.com/isxwor/shift4-nextjs',
   },
 };
