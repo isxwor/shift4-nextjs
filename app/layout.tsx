@@ -2,6 +2,8 @@ import '#/styles/globals.css';
 
 import type { Metadata, Viewport } from 'next';
 
+import { Toaster } from 'sonner';
+
 import { SiteHeader } from '#/components/site-header';
 import { TailwindIndicator } from '#/components/tailwind-indicator';
 
@@ -46,6 +48,7 @@ const RootLayout = ({ children }: RootLayoutProps) => (
         <SiteHeader />
         <div className='flex-1'>{children}</div>
       </div>
+      <Toaster />
       <TailwindIndicator />
     </body>
   </html>

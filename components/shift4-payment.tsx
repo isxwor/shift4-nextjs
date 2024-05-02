@@ -3,6 +3,8 @@
 import { useRef, useState, useTransition } from 'react';
 import Script from 'next/script';
 
+import { toast } from 'sonner';
+
 import { Button } from '#/components/ui/button';
 import {
   Card,
@@ -40,6 +42,10 @@ export const Shift4Payment = () => {
         const token = await shift4.current.createToken(components.current);
         console.log({ token });
         // send token to your server
+        toast.success(`Token: ${token.id}`, {
+          description:
+            'Send this token to your server to complete the payment.',
+        });
       } catch (error) {
         const shift4Error = error as Shift4Error;
         setErrorMessage(shift4Error.message);
@@ -68,7 +74,6 @@ export const Shift4Payment = () => {
                 these cards
               </a>{' '}
               to test the integration.
-              {/* Add a new payment method to your account. */}
             </CardDescription>
           </CardHeader>
           <CardContent className='grid grid-cols-2 gap-4'>
