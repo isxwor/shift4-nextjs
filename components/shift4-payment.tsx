@@ -81,7 +81,7 @@ export const Shift4Payment = () => {
               <Label>Card Number</Label>
               <div
                 data-shift4='number'
-                className='form-control h-10 rounded-md border border-input px-3 py-2'
+                className='form-control h-10 rounded-md border border-input py-2 pl-2 pr-3'
               />
             </div>
             <div className='space-y-2'>
